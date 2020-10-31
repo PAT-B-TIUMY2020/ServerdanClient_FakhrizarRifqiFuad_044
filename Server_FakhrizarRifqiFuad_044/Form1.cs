@@ -23,9 +23,6 @@ namespace Server_FakhrizarRifqiFuad_044
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-
-            
             btnOff.Enabled = false;
             btnOn.Enabled = true;
 
@@ -36,13 +33,12 @@ namespace Server_FakhrizarRifqiFuad_044
         private void btnOff_Click(object sender, EventArgs e)
         {
             hostObj = new ServiceHost(typeof(Matematika));
-            hostObj.Open();
+            hostObj.Close();
             btnOff.Enabled = false;
             btnOn.Enabled = true;
 
             lblServer.Text = "OFF";
             lblStatus.Text = "Klik ON untuk Menjalankan Server";
-            hostObj.Close();
         }
 
         private void btnOn_Click(object sender, EventArgs e)
